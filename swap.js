@@ -14,4 +14,4 @@ function swap(arr, index1, index2) {
   arr.splice(index2, 0, popData);
   return arr;
 }
-export default has;
+export default swap;
