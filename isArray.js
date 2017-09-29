@@ -11,6 +11,7 @@
  * var shallow = _.isArray([]);
  * console.log(shallow); // true
  */
- export default (o) {
+function isArray(o) {
   return Object.prototype.toString.call(o) === '[object Array]';
-},
+}
+export default isArray;

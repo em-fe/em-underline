@@ -6,7 +6,7 @@
  * @example
  *
  */
- export default (data) {
+function toBase64(data) {
   let result = '';
   const length = data.length;
   const toBase64Table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -33,4 +33,5 @@
     }
   }
   return result;
-};
+}
+export default toBase64;

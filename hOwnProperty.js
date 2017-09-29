@@ -11,6 +11,7 @@
  * var shallow = _.hOwnProperty({a:1,b:2}, 'c');
  * console.log(shallow); // false
  */
- export default (item, attr) {
+function hOwnProperty(item, attr) {
   return Object.prototype.hasOwnProperty.call(item, attr);
-};
+}
+ export default hOwnProperty;
