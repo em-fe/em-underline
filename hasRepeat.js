@@ -10,11 +10,11 @@
  * console.log(shallow); // true
  */
 function hasRepeat(arrays) {
-  let isRepeat = false;
+  var isRepeat = false;
   const len = arrays.length;
   if (len > 1) {
-    for (let i = 0; i < len; i++) {
-      if (arrays.every(as => arrays[i] === as)) {
+    for (var i = 0; i < len; i++) {
+      if (arrays.every(function(as){return arrays[i] === as;})) {
         isRepeat = true;
         break;
       }
