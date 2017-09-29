@@ -1,7 +1,7 @@
 /**
  * 将数据插入到数组的某一位置
  * @static
- * @since 1.0.0
+ * @since 1.0.2
  * @returns {Array} Returns {}
  * @example
  *
