@@ -11,7 +11,7 @@ import random from './random.js';
  * var shallow = _.formatParams({a:1,b:2});
  * console.log(shallow); // a=1&b=2&callback=callback&v=1234
  */
-export default (data, callbackName, way = 'jsonp') {
+function formatParams(data, callbackName, way = 'jsonp') {
   const arr = [];
   Object.keys(data).forEach((dataKey) => {
     arr.push(`${encodeURIComponent(dataKey)}=${encodeURIComponent(data[dataKey])}`);
@@ -25,4 +25,6 @@ export default (data, callbackName, way = 'jsonp') {
     arr.push(`v=${random()}`);
   }
   return arr.join('&');
-};
+}
+
+export default formatParams;

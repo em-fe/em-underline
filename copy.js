@@ -9,6 +9,7 @@
  * var shallow = _.copy(objects);
  * console.log(shallow[0] === objects[0]);
  */
- export default (obj) {
-  return JSON.parse(JSON.stringify(obj));
-};
+ function copy(obj) {
+   return JSON.parse(JSON.stringify(obj));
+ }
+export default copy;

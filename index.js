@@ -1,9 +1,30 @@
-export browser from './browser.js';
-export date from './date.js';
-export copy from './copy.js';
-export formatParams from './formatParams.js';
-export hOwnProperty from './hOwnProperty.js';
-export isArray from './isArray.js';
-export random from './random.js';
-export time from './time.js';
-export toBase64 from './toBase64.js';
+import browser from './browser.js';
+import { getDayCountOfMonth, clearHours, initTimeDate, getFirstDayOfMonth } from './date.js';
+import copy from './copy.js';
+import formatParams from './formatParams.js';
+import hOwnProperty from './hOwnProperty.js';
+import isArray from './isArray.js';
+import random from './random.js';
+import time from './time.js';
+import toBase64 from './toBase64.js';
+import hasRepeat from './hasRepeat.js';
+
+const underline = () => {};
+
+underline.browser = browser;
+underline.date = {
+  getDayCountOfMonth,
+  clearHours,
+  initTimeDate,
+  getFirstDayOfMonth,
+};
+underline.copy = copy;
+underline.formatParams = formatParams;
+underline.hOwnProperty = hOwnProperty;
+underline.isArray = isArray;
+underline.random = random;
+underline.time = time;
+underline.toBase64 = toBase64;
+underline.hasRepeat = hasRepeat;
+
+export default underline;
