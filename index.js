@@ -13,10 +13,10 @@ const underline = () => {};
 
 underline.browser = browser;
 underline.date = {
-  getDayCountOfMonth,
-  clearHours,
-  initTimeDate,
-  getFirstDayOfMonth,
+  getDayCountOfMonth: getDayCountOfMonth,
+  clearHours: clearHours,
+  initTimeDate: initTimeDate,
+  getFirstDayOfMonth: getFirstDayOfMonth,
 };
 underline.copy = copy;
 underline.formatParams = formatParams;

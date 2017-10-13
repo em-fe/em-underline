@@ -11,7 +11,9 @@
  * var shallow = _.random(1, 20);
  * console.log(shallow); // 返回 1-20 之间的随机数
  */
-function random(min = 500, max = 10000) {
-  return Math.floor((Math.random() * max) + min);
+function random(min, max) {
+  var newMin = min || 500;
+  var newMax = max || 10000;
+  return Math.floor((Math.random() * newMax) + newMin);
 }
 export default random;

@@ -10,7 +10,7 @@
  * console.log(shallow); // ['a', 'd', 'b', 'c']
  */
 function swap(arr, index1, index2) {
-  const popData = arr.splice(index1, 1)[0];
+  var popData = arr.splice(index1, 1)[0];
   arr.splice(index2, 0, popData);
   return arr;
 }

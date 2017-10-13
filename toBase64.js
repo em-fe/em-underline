@@ -7,11 +7,11 @@
  *
  */
 function toBase64(data) {
-  let result = '';
-  const length = data.length;
-  const toBase64Table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-  const base64Pad = '=';
-  let i;
+  var result = '';
+  var length = data.length;
+  var toBase64Table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+  var base64Pad = '=';
+  var i;
   for (i = 0; i < (length - 2); i += 3) {
     result += toBase64Table[data.charCodeAt(i) >> 2];
     result += toBase64Table[((data.charCodeAt(i) & 0x03) << 4) + (data.charCodeAt(i + 1) >> 4)];
