@@ -12,8 +12,8 @@ const timeObject = {
    * var shallow = _.random(11);
    * console.log(shallow); // '11'
    */
-  zeroFill(time) {
-    return time < 10 ? `0${time}` : time.toString();
+  zeroFill: function(time) {
+    return time < 10 ? '0' + time : time.toString();
   },
   /**
    * 补零
@@ -28,14 +28,14 @@ const timeObject = {
    * var shallow = _.random(11);
    * console.log(shallow); // '11'
    */
-  handleConputedDate: (i, times) => {
-    const newTimes = {
+  handleConputedDate: function(i, times) {
+    var newTimes = {
       name: timeObject.zeroFill(i),
       undo: false,
     };
     if (times.length > 0) {
-      times.every((time) => {
-        const newTime = timeObject.zeroFill(time);
+      times.every(function(time) {
+        var newTime = timeObject.zeroFill(time);
         newTimes.undo = newTime === newTimes.name;
         return !newTimes.undo;
       });
@@ -51,14 +51,14 @@ const timeObject = {
    *
    * 从 em-fe中寻找
    */
-  handleConputedTime: (i, times) => {
-    const newTimes = {
+  handleConputedTime: function(i, times) {
+    var newTimes = {
       num: timeObject.zeroFill(i),
       undo: false,
     };
     if (times.length > 0) {
-      times.every((time) => {
-        const newTime = timeObject.zeroFill(time);
+      times.every(function(time) {
+        var newTime = timeObject.zeroFill(time);
         newTimes.undo = newTime === newTimes.num;
         return !newTimes.undo;
       });
@@ -74,9 +74,9 @@ const timeObject = {
    *
    * 从 em-fe中寻找
    */
-  loopChoice: (times) => {
-    let newUndo = true;
-    times.every((time) => {
+  loopChoice: function(times) {
+    var newUndo = true;
+    times.every(function(time) {
       newUndo = time.num;
       return time.undo;
     });

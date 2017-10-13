@@ -24,7 +24,7 @@
  * console.log(o2); // {a:{c:{d:2222}}}
  */
  function exchange(obj1, obj2, attr) {
-   let val = '';
+   var val = '';
    if (Array.isArray(obj1[attr])) {
      val = [];
      obj1[attr].forEach(obj1Val => val.push(obj1Val));

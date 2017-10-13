@@ -9,21 +9,21 @@ export default {
    * _.versions()
    * // => Logs {isMobile: true, os: true} // 是一个ios手机
    */
-  versions() {
-    const ua = navigator.userAgent;
-    const isAndroid = /Android/i.test(ua);
-    const isBlackBerry = /BlackBerry/i.test(ua);
-    const isWindowPhone = /IEMobile/i.test(ua);
-    const isIOS = /iPhone|iPad|iPod/i.test(ua);
-    const isMobile = isAndroid || isBlackBerry || isWindowPhone || isIOS;
-    let os = 'pc';
+  versions: function() {
+    var ua = navigator.userAgent;
+    var isAndroid = /Android/i.test(ua);
+    var isBlackBerry = /BlackBerry/i.test(ua);
+    var isWindowPhone = /IEMobile/i.test(ua);
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    var isMobile = isAndroid || isBlackBerry || isWindowPhone || isIOS;
+    var os = 'pc';
     if (isAndroid) os = 'android';
     if (isBlackBerry) os = 'BlackBerry';
     if (isWindowPhone) os = 'WindowPhone';
     if (isIOS) os = 'IOS';
     return {
-      isMobile,
-      os,
+      isMobile: isMobile,
+      os: os,
     };
   },
 };
