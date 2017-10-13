@@ -9,7 +9,7 @@ import time from './time.js';
 import toBase64 from './toBase64.js';
 import hasRepeat from './hasRepeat.js';
 
-const underline = () => {};
+const underline = function() {};
 
 underline.browser = browser;
 underline.date = date;
