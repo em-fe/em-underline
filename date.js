@@ -8,17 +8,18 @@
  * var shallow = _.getDayCountOfMonth(2017, 9);
  * console.log(shallow); // 30
  */
-export const getDayCountOfMonth = (year, month) => {
-  if (month === 3 || month === 5 || month === 8 || month === 10) {
-    return 30;
-  } else if (month === 1) {
-    if (((year % 4 === 0) && (year % 100 !== 0)) || year % 400 === 0) {
-      return 29;
-    }
-    return 28;
-  }
-  return 31;
-};
+function getDayCountOfMonth(year, month) {
+   if (month === 3 || month === 5 || month === 8 || month === 10) {
+     return 30;
+   } else if (month === 1) {
+     if (((year % 4 === 0) && (year % 100 !== 0)) || year % 400 === 0) {
+       return 29;
+     }
+     return 28;
+   }
+   return 31;
+ }
+
 /**
  * 根据清除的日期时间
  * @static
@@ -29,11 +30,13 @@ export const getDayCountOfMonth = (year, month) => {
  * var shallow = _.clearHours('2017/9/9');
  * console.log(shallow); // 时间格式
  */
-export const clearHours = (time = '') => {
-  const cloneDate = new Date(time);
+function clearHours(time) {
+  var newTime = time || '';
+  var cloneDate = new Date(newTime);
   cloneDate.setHours(0, 0, 0, 0);
   return cloneDate.getTime();
-};
+}
+
 /**
  * 设定固定的时间
  * @static
@@ -44,13 +47,14 @@ export const clearHours = (time = '') => {
  * var shallow = _.initTimeDate('2017/9/9');
  * console.log(shallow); // 时间格式
  */
-export const initTimeDate = () => {
-  const date = new Date();
+function initTimeDate() {
+  var date = new Date();
   date.setHours(0);
   date.setMinutes(0);
   date.setSeconds(0);
   return date;
-};
+}
+
 /**
  * 返回每月的第一天
  * @static
@@ -61,8 +65,16 @@ export const initTimeDate = () => {
  * var shallow = _.initTimeDate('2017/9/9');
  * console.log(shallow); // 时间格式
  */
-export const getFirstDayOfMonth = (date) => {
-  const temp = new Date(date.getTime());
+
+function getFirstDayOfMonth(date) {
+  var temp = new Date(date.getTime());
   temp.setDate(1);
   return temp.getDay();
+}
+
+export default {
+  getFirstDayOfMonth: getFirstDayOfMonth,
+  initTimeDate: initTimeDate,
+  getDayCountOfMonth: getDayCountOfMonth,
+  clearHours: clearHours,
 };
