@@ -1,5 +1,5 @@
 import browser from './browser.js';
-import { getDayCountOfMonth, clearHours, initTimeDate, getFirstDayOfMonth } from './date.js';
+import date from './date.js';
 import copy from './copy.js';
 import formatParams from './formatParams.js';
 import hOwnProperty from './hOwnProperty.js';
@@ -12,12 +12,7 @@ import hasRepeat from './hasRepeat.js';
 const underline = () => {};
 
 underline.browser = browser;
-underline.date = {
-  getDayCountOfMonth: getDayCountOfMonth,
-  clearHours: clearHours,
-  initTimeDate: initTimeDate,
-  getFirstDayOfMonth: getFirstDayOfMonth,
-};
+underline.date = date;
 underline.copy = copy;
 underline.formatParams = formatParams;
 underline.hOwnProperty = hOwnProperty;

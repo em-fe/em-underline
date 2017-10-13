@@ -1,4 +1,4 @@
-const timeObject = {
+var timeObject = {
   /**
    * 补零
    * @static
@@ -74,12 +74,26 @@ const timeObject = {
    *
    * 从 em-fe中寻找
    */
-  loopChoice: function(times) {
+  loopChoice: function(times, pertime){
     var newUndo = true;
-    times.every(function(time) {
-      newUndo = time.num;
-      return time.undo;
-    });
+    if (pertime) {
+      newUndo = pertime;
+      var perIndex = times.findIndex(function(time) {
+        return time.num === pertime;
+      });
+      var iNowTime = times[perIndex];
+      if (iNowTime.undo) {
+        times.every(function(time) {
+          newUndo = time.num;
+          return time.undo;
+        });
+      }
+    } else {
+      times.every(function(time) {
+        newUndo = time.num;
+        return time.undo;
+      });
+    }
     return newUndo;
   },
 };
