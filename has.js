@@ -1,7 +1,7 @@
 /**
  * 检查数组中是否存在某值
  * @static
- * @since 1.0.0
+ * @since 1.0.2
  * @returns {boolean} Returns {}
  * @example
  *
