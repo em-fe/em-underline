@@ -1,9 +1,9 @@
 import guidS4 from './guidS4.js';
 /**
- * 随机数
+ * 生成32位码
  * @static
- * @since 1.0.0
- * @returns {Object} Returns {}
+ * @since 1.0.3
+ * @returns {string} Returns {}
  * @example
  *
  * var shallow = _.guid();

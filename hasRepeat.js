@@ -1,7 +1,7 @@
 /**
  * 是否有一样的
  * @static
- * @since 1.0.0
+ * @since 1.0.2
  * @returns {boolean} Returns {}
  * @example
  *
