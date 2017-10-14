@@ -5,11 +5,17 @@
  * @returns {string} Returns ''
  * @example
  *
- * var shallow = _.random();
- * console.log(shallow); // 返回 500-10000 之间的随机数
+ * url http://underline.com?underline=lee
+ * var shallow = _.searchUrl('aaa');
+ * console.log(shallow); // lee
  *
- * var shallow = _.random(1, 20);
- * console.log(shallow); // 返回 1-20 之间的随机数
+ * url http://underline.com?underline=lee
+ * var shallow = _.searchUrl('em');
+ * console.log(shallow); // ''
+ *
+ * url http://underline.com
+ * var shallow = _.searchUrl('em');
+ * console.log(shallow); // ''
  */
 function searchUrl(name) {
   var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
