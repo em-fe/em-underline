@@ -9,6 +9,8 @@ import time from './time.js';
 import toBase64 from './toBase64.js';
 import hasRepeat from './hasRepeat.js';
 import searchUrl from './searchUrl.js';
+import typeofFn from './typeof.js';
+import empty from './empty.js';
 
 const underline = function() {};
 
@@ -23,5 +25,7 @@ underline.time = time;
 underline.toBase64 = toBase64;
 underline.hasRepeat = hasRepeat;
 underline.searchUrl = searchUrl;
+underline.typeof = typeofFn;
+underline.empty = empty;
 
 export default underline;
