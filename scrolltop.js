@@ -2,7 +2,12 @@
  * 滚动到某个位置，支持动画
  * @static
  * @since 1.0.9
- * @returns {string} Returns ''
+ * @param {object} 参数
+    el： 滚动的原生节点对象
+    from： 从哪个位置，默认是 0
+    to：滚动到某个位置
+    time： 用多少毫秒，默认是 500 ms
+ * @returns {} Returns undefined
  * @example
  *
  * url http://underline.com?underline=lee
@@ -26,7 +31,7 @@
    var el = params.el || null;
    var from = params.from || 0;
    var to = params.to || 0;
-   var duration = params.duration || 500;
+   var duration = params.time || 500;
    var difference = Math.abs(from - to);
    var step = Math.ceil(difference / duration * 50);
 
