@@ -11,6 +11,7 @@ import hasRepeat from './hasRepeat.js';
 import searchUrl from './searchUrl.js';
 import typeofFn from './typeof.js';
 import empty from './empty.js';
+import scrolltop from './scrolltop.js';
 
 const underline = function() {};
 
@@ -27,5 +28,6 @@ underline.hasRepeat = hasRepeat;
 underline.searchUrl = searchUrl;
 underline.typeof = typeofFn;
 underline.empty = empty;
+underline.scrolltop = scrolltop;
 
 export default underline;
