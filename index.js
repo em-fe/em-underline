@@ -12,6 +12,8 @@ import searchUrl from './searchUrl.js';
 import typeofFn from './typeof.js';
 import empty from './empty.js';
 import scrolltop from './scrolltop.js';
+import nbr from './nbr.js';
+import brn from './brn.js';
 
 const underline = function() {};
 
@@ -29,5 +31,7 @@ underline.searchUrl = searchUrl;
 underline.typeof = typeofFn;
 underline.empty = empty;
 underline.scrolltop = scrolltop;
+underline.brn = brn;
+underline.nbr = nbr;
 
 export default underline;
