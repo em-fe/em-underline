@@ -1,6 +1,6 @@
 {
   "name": "em-underline",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "一个类似lodash的em工具集",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
