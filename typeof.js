@@ -12,8 +12,8 @@
  * console.log(shallow); // 'array'
  */
 function typeOfFn(obj) {
-  const toString = Object.prototype.toString;
-  const map = {
+  var toString = Object.prototype.toString;
+  var map = {
     '[object Boolean]'  : 'boolean',
     '[object Number]'   : 'number',
     '[object String]'   : 'string',

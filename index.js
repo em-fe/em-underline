@@ -15,7 +15,7 @@ import scrolltop from './scrolltop.js';
 import nbr from './nbr.js';
 import brn from './brn.js';
 
-const underline = function() {};
+var underline = function() {};
 
 underline.browser = browser;
 underline.date = date;
