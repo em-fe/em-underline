@@ -14,6 +14,7 @@ import empty from './empty.js';
 import scrolltop from './scrolltop.js';
 import nbr from './nbr.js';
 import brn from './brn.js';
+import utf8encode from './utf8encode.js';
 
 var underline = function() {};
 
@@ -33,5 +34,6 @@ underline.empty = empty;
 underline.scrolltop = scrolltop;
 underline.brn = brn;
 underline.nbr = nbr;
+underline.utf8encode = utf8encode;
 
 export default underline;
