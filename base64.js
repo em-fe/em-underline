@@ -256,9 +256,11 @@ function CharToHex(str) {
 
     // 把数据转换成十六进制的字符串
     h = c.toString(16);
-    if (h.length < 2) { h = `0${h}`; }
+    if (h.length < 2) {
+      h = '0' + h;
+    }
 
-    out += `\\x${h} `;
+    out += '\\x' + h;
     if (i > 0 && i % 8 == 0) { out += '\r\n'; }
   }
 
@@ -266,23 +268,23 @@ function CharToHex(str) {
 }
 
 export default {
-  encode(str) {
+  encode: function(str) {
     // 普通 Base64 编码
     return base64encode(unicodeToUtf8(str));
   },
-  encodeUrl(str) {
+  encodeUrl: function(str) {
     // 使用 Base64 编码字符串
     return base64encode(unicodeToUtf8(str), 1);
   },
-  decode(str) {
+  decode: function(str) {
     // 兼容的 Base64 解码
     return utf8ToUnicode(base64decode(str));
   },
-  encodeToHex(str) {
+  encodeToHex: function(str) {
     // 普通 Base64 编码 以十六进制显示
     return CharToHex(base64encode(unicodeToUtf8(str)));
   },
-  encodeUrlToHex(str) {
+  encodeUrlToHex: function(str) {
     // 使用 Base64 编码 url 以十六进制显示
     return CharToHex(base64encode(unicodeToUtf8(str), 1));
   },
