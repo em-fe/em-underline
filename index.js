@@ -16,6 +16,7 @@ import scrolltop from './scrolltop.js';
 import nbr from './nbr.js';
 import brn from './brn.js';
 import utf8encode from './utf8encode.js';
+import guid from './guid.js';
 
 var underline = function() {};
 
@@ -37,5 +38,6 @@ underline.scrolltop = scrolltop;
 underline.brn = brn;
 underline.nbr = nbr;
 underline.utf8encode = utf8encode;
+underline.guid = guid;
 
 export default underline;
