@@ -1,6 +1,6 @@
 {
   "name": "em-underline",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "一个类似lodash的em工具集",
   "main": "index.js",
   "unpkg": "index.js",
