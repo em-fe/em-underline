@@ -11,7 +11,7 @@ export default {
    */
   versions: function() {
     var ua = navigator.userAgent;
-    var isAndroid = /Android/i.test(ua);
+    var isAndroid = /Android/i.test(ua) || u.indexOf('Linux') > -1;
     var isBlackBerry = /BlackBerry/i.test(ua);
     var isWindowPhone = /IEMobile/i.test(ua);
     var isIOS = /iPhone|iPad|iPod/i.test(ua);
