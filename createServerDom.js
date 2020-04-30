@@ -1,16 +1,21 @@
-export default () => {
+export default (account) => {
   /* eslint-disable */
   let host = '';
+  let url = '';
+  const pathname = window.location.pathname;
   if (window.location.hostname === 'localhost') {
     host = 'http://gateway.inner.evente.cn:8000';
+    url = `${host}/super/api/help_center/list?path=/${account}${pathname}`
   } else {
     host = window.location.origin.replace('home','gateway');
+    url = `${host}/super/api/help_center/list?path=${pathname}`
   }
-  const pathname = window.location.pathname;
 
-  const url = `${host}/super/api/help_center/list?path=${pathname}`
   let xhr=new XMLHttpRequest();
       xhr.open('GET',url,false);
+      if (window.location.hostname !== 'localhost') {
+        xhr.withCredentials = true;
+      }
       xhr.send();
   const res = JSON.parse(xhr.responseText);
   const list = res.data;
@@ -20,7 +25,7 @@ export default () => {
     list.forEach((item) => {
       listHtml += `<li class="serverBox-main-ul-li">• ${item.title}</li>`;
     });
-    contHtml = `<div class="serverBox-main-title">小易帮助指南</div> <ul id="ul" class="serverBox-main-ul"> ${liHtml}</ul>`
+    contHtml = `<div class="serverBox-main-title">小易帮助指南</div> <ul id="ul" class="serverBox-main-ul"> ${listHtml}</ul>`
   } else {
     contHtml = '<div class="serverBox-main-title">有什么需要请尽管问小易~</div>'
   }
